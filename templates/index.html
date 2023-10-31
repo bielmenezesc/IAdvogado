@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Envio de Texto para a API Flask</title>
+</head>
+<body>
+    <h1>Envio de Texto para a API Flask</h1>
+    <form id="myForm">
+        <label for="texto">Insira o Texto:</label><br>
+        <textarea id="texto" name="texto" rows="4" cols="50"></textarea><br><br>
+        <input type="button" value="Enviar" onclick="enviarTexto()">
+    </form>
+
+    <script>
+        function enviarTexto() {
+            var texto = document.getElementById("texto").value;
+
+            // Faz a requisição para a sua API Flask
+            fetch('http://127.0.0.1:5000/', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'text/plain' // Define o tipo de conteúdo como texto simples
+                },
+                body: texto // Envia o texto para a API
+            })
+            .then(response => response.text())
+            .then(data => console.log(data)) // Mostra a resposta da API no console do navegador
+            .catch(error => console.log('Erro:', error));
+        }
+    </script>
+</body>
+</html>
