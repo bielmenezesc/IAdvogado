@@ -4,100 +4,182 @@
 <head>
     <title>I.A to Jur</title>
     <style>
-body {
-  background-color:#b5b5c7;
-  font-family: Arial, Helvetica, sans-serif;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
-}
-.header {
-  background-color: var(--purple);
-  color: var(--white);
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-}
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: calc(10px + 2vmin);
+            color: black;
+            margin: 0;
+            text-align: center;
+        }
 
-h1 {
-    text-align: center;
-    background-color:  #3c3c4b;
-    color: #fff;
-    padding: 20px;
-}
+        header {
+            background-color: white;
+            width: 100%;
+            padding: 22px;
+            box-sizing: border-box;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            text-transform: uppercase;
+            font-weight: bold;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+        }
 
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 4rem;
-  margin-top: 0;
-    }
-label {
-    display: block;
-    font-weight: bold;
-    margin-top: 10px;
-}
+        form {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 4rem;
+            margin-top: 100px;
+            background-color: #fff;
+            padding: 40px;
+            border: 1px solid #ddd;
+            box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+            border-radius: 4px;
+        }
 
-textarea {
-    width: 100%;
-    height: 300px;
-    padding: 10px;
-    outline: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    resize: none;
-    background-color: #f1f7ff;
-            
-}
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: -40px;
+        }
 
-input[type="button"] {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 10px;
+            outline: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            resize: none;
+            background-color: #f1f7ff;
+            border: 1px solid gray;
+            margin: 5px 0;
+            font-family: 'Poppins', sans-serif;
+        }
 
-input[type="button"]:hover {
-    background-color: #555;
-}
+        input[type="button"] {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: -50px;
+        }
 
-footer{
-    align-items: center;
-    color: #fff;
-    background-color: #555;
-}
+        input[type="button"]:hover {
+            background-color: #555;
+        }
+
+        footer {
+            align-items: center;
+            color: #fff;
+            background-color: #555;
+        }
+
+        #loadingMessage {
+            display: none;
+            font-size: 18px;
+            padding: 20px;
+            background-color: #2ecc71;
+            /* Cor de fundo verde */
+            color: #fff;
+            /* Cor do texto branca */
+            border-radius: 8px;
+            /* Cantos arredondados */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Sombra suave */
+        }
+
+
+        a#downloadLink {
+            font-size: 18px;
+            display: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            /* Remove o sublinhado padrão do link */
+        }
+
+        a#downloadLink:hover {
+            background-color: #555;
+        }
+
+        .logo {
+            font-size: 40px;
+            font-weight: bold;
+            text-transform: lowercase;
+            font-family: 'Alfa Slab One';
+            color: #2b61c4;
+        }
+
+        .logo-text {
+            display: inline-block;
+            text-decoration: underline;
+            font-style: italic;
+            font-size: 50px;
+        }
+
+        #ia-text {
+            text-transform: uppercase;
+        }
     </style>
 </head>
 
 <body>
-    <div className="header">
-        <h1>I.A Para Otimização de Processos Jurídicos</h1>
-      </div>
+    <header>
+        <div class="logo">
+            <span class="logo-text" id="ia-text">IA</span><span class="logo-text" id="advogado-text">dvogado</span>
+        </div>
+    </header>
     <form id="myForm">
-        <label for="texto">Insira o texto para ser convertido para documento formal:</label><br>
+        <label for="texto">Deixe o nosso Advogado Virtual criar sua petição!</label><br>
+        <label for="texto">Descreva o seu caso:</label><br>
         <textarea id="texto" name="texto" rows="4" cols="50" placeholder="Digite aqui"></textarea><br><br>
-        <input type="button" value="Gerar Documento" onclick="enviarTexto()">
+        <input type="button" value="Gerar Documento" onclick="enviarTexto()" id="submitButton">
+        <p id="loadingMessage">O documento está sendo gerado. Por favor, aguarde...</p>
+        <a href="#" id="downloadLink">Download do Documento</a>
     </form>
 
     <script>
         function enviarTexto() {
             var texto = document.getElementById("texto").value;
+            var submitButton = document.getElementById("submitButton");
+            var loadingMessage = document.getElementById("loadingMessage");
+            var downloadLink = document.getElementById("downloadLink");
 
-            // Faz a requisição para a sua API Flask
+            submitButton.style.display = "none"; // Oculta o botão
+            loadingMessage.style.display = "block"; // Exibe a mensagem de carregamento
+
             fetch('http://127.0.0.1:5000/', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'text/plain' // Define o tipo de conteúdo como texto simples
+                    'Content-Type': 'text/plain'
                 },
-                body: texto // Envia o texto para a API
+                body: texto
             })
-                .then(response => response.text())
-                .then(data => console.log(data)) // Mostra a resposta da API no console do navegador
+                .then(response => {
+                    loadingMessage.style.display = "none"; // Esconde a mensagem de carregamento
+                    downloadLink.style.display = "inline-block"; // Exibe o link de download
+                    downloadLink.addEventListener('click', function () {
+                        // Redireciona para o link do documento
+                        window.location.href = 'http://127.0.0.1:5000/download'; // Substitua com o caminho real do seu documento
+                    });
+                })
                 .catch(error => console.log('Erro:', error));
         }
     </script>
