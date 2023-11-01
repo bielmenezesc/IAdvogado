@@ -11,8 +11,8 @@ Este aplicativo foi desenvolvido com o propósito de facilitar a transformação
 ### Gabriel Menezes Cabral
 - **Matrícula:** 119110372
 
-### Henrique
-- **Matrícula:** 987654321
+### Paulo Henrique Ribeiro Medeiros Cruz
+- **Matrícula:** 118210460
 
 ## Funcionalidades
 
