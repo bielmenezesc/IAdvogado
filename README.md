@@ -32,8 +32,9 @@ Para executar este aplicativo:
 
 1. Certifique-se de ter Python instalado.
 2. Instale as dependências do projeto com o comando `pip install -r requirements.txt`.
-3. Execute o servidor Flask com o comando `python app.py`.
-4. Acesse a aplicação através do navegador no endereço.
+3. Crie um arquivo .env e adicione a  uma variável de ambiente com a sua chave da OpenAI.
+4. Execute o servidor Flask com o comando `python app.py`.
+5. Acesse a aplicação através do navegador no endereço.
 
 Certifique-se de ter as chaves de API da OpenAI configuradas corretamente no aplicativo para o funcionamento adequado da integração.
 
