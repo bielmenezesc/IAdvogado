@@ -1,7 +1,5 @@
 from docx import Document
 import os
-from docx import Document
-from bs4 import BeautifulSoup
 
 def create_word(response):
     # Caminho para salvar os arquivos DOCX
