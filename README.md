@@ -26,6 +26,10 @@ Este aplicativo foi desenvolvido com o propósito de facilitar a transformação
 - **Flask:** Framework de Python para construção de aplicativos web.
 - **HTML e CSS:** Páginas e estilização para a interface do usuário.
 
+## Explicação do Código
+
+Neste projeto, O foi feita uma API em python utilizando Flask, que por sua vez utiliza a API da OpenAI para criar petições jurídicas a partir de um texto fornecido. Ele carrega chaves de API e utiliza funções para enviar um texto base à API da OpenAI, que gera uma petição jurídica com base nesse texto. Depois, com esse texto como resposta, é gerado um arquivo .docx, ou seja Word, com as informações do documento. E fica disponível para dowload.
+
 ## Execução do Aplicativo
 
 Para executar este aplicativo:
