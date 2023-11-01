@@ -1,3 +1,4 @@
 # Arquivos a serem ignorados
 output_docs/
 __pycache__/
+.env
