@@ -1,4 +1,6 @@
-# IAdvogado - Aplicativo de Transformação de Texto em Petições Jurídicas
+# IAdvogado 
+
+## Aplicativo de Transformação de Texto em Petições Jurídicas
 
 Este aplicativo foi desenvolvido com o propósito de facilitar a transformação de textos coloquiais em petições jurídicas utilizando a API da OpenAI. Ele utiliza Python com o framework Flask para a lógica do lado do servidor e páginas HTML e CSS para a interface do usuário.
 
