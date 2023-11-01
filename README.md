@@ -4,6 +4,14 @@
 
 Este aplicativo foi desenvolvido com o propósito de facilitar a transformação de textos coloquiais em petições jurídicas utilizando a API da OpenAI. Ele utiliza Python com o framework Flask para a lógica do lado do servidor e páginas HTML e CSS para a interface do usuário.
 
+## Integrantes
+
+### Gabriel Menezes Cabral
+- **Matrícula:** 119110372
+
+### Henrique
+- **Matrícula:** 987654321
+
 ## Funcionalidades
 
 - **Conversão de Texto:** Aceita textos coloquiais como entrada e os transforma em linguagem jurídica adequada para petições.
@@ -21,9 +29,9 @@ Este aplicativo foi desenvolvido com o propósito de facilitar a transformação
 Para executar este aplicativo:
 
 1. Certifique-se de ter Python instalado.
-2. Instale as dependências do projeto listadas no arquivo `requirements.txt`.
+2. Instale as dependências do projeto com o comando `pip install -r requirements.txt`.
 3. Execute o servidor Flask com o comando `python app.py`.
-4. Acesse a aplicação através do navegador no endereço `http://localhost:5000`.
+4. Acesse a aplicação através do navegador no endereço.
 
 Certifique-se de ter as chaves de API da OpenAI configuradas corretamente no aplicativo para o funcionamento adequado da integração.
 
