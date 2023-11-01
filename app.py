@@ -1,11 +1,11 @@
 from flask import Flask, request, render_template, redirect, url_for, send_file
 
-from ai import return_doc
-from create_word import create_word
+from utils.ai import return_doc
+from utils.create_word import create_word
 
 import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./css')
 
 # Rota para a raiz da API
 @app.route('/')
