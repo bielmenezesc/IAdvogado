@@ -5,7 +5,7 @@
 Este aplicativo foi desenvolvido com o propósito de facilitar a transformação de textos coloquiais em petições jurídicas utilizando a API da OpenAI. Ele utiliza Python com o framework Flask para a lógica do lado do servidor e páginas HTML e CSS para a interface do usuário.
 
 ![image](https://i.imgur.com/UqQIeVW.png)
-<iframe width="560" height="315" src="https://i.imgur.com/8VlZ66G.mp4" frameborder="0" allowfullscreen></iframe>
+[Clique aqui para ver um vídeo demonstrativo](https://i.imgur.com/8VlZ66G.mp4)
 
 ## Integrantes
 
